@@ -1,0 +1,19 @@
+# Entorno virtual
+.venv/
+venv/
+
+# Compilaciones
+build/
+dist/
+
+# Python
+__pycache__/
+*.pyc
+
+# Flet
+*.apk
+*.aab
+
+# IDE
+.vscode/
+.idea/

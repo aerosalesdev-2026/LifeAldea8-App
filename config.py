@@ -1,0 +1,3 @@
+PROJECT_ID="cbojgbvfvz.g1"
+DATABASE="ALMACENESVES8_LIFE"
+API_KEY="F6srwl2JaY0ab4kgemnTwaZfhjDikJNl7oEDmRMcmdQ"
