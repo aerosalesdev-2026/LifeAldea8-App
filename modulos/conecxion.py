@@ -28,6 +28,9 @@ def ejecutar_sql(sql, params=None):
         }
     )
 
+    print("STATUS SQL:", respuesta.status_code)
+    print("RESPUESTA SQL:", respuesta.text)
+
     respuesta.raise_for_status()
 
     return respuesta.json()["data"]
