@@ -3,7 +3,6 @@ import router
 
 
 async def main(page: ft.Page):
-    print("FLET CONECTADO")
     page.title = "LIFE ALDEA 8"
 
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
@@ -11,9 +10,5 @@ async def main(page: ft.Page):
 
     router.configurar_router(page)
 
-print("ANTES DE INICIAR FLET")
 
-ft.run(
-    main,
-    port=8550
-)
+ft.run( main,port=8550)

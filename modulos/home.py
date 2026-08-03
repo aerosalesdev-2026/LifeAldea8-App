@@ -47,6 +47,7 @@ def home_view(page):
     return ft.Column(
     expand=True,
     spacing=30,
+    scroll=ft.ScrollMode.AUTO,
     controls=[
         ft.Text(
             f"Bienvenido(a), {user['Nombres']}",
@@ -59,8 +60,8 @@ def home_view(page):
             color=ft.Colors.GREY_700,
         ),
         ft.Divider(),
-        row
-    ]
+        row,
+    ],
 )
     
     
