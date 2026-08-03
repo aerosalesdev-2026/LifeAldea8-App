@@ -1,6 +1,5 @@
 import flet as ft
 import router
-import actualizador
 
 
 async def main(page: ft.Page):
