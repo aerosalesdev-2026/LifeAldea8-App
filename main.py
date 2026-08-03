@@ -4,7 +4,7 @@ import actualizador
 
 
 async def main(page: ft.Page):
-
+    print("FLET CONECTADO")
     page.title = "LIFE ALDEA 8"
 
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
@@ -58,7 +58,7 @@ async def main(page: ft.Page):
     if not nueva_version:
      router.configurar_router(page)
 
-
+print("ANTES DE INICIAR FLET")
 
 ft.run(
     main,
