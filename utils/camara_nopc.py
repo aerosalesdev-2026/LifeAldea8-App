@@ -1,8 +1,19 @@
 import flet as ft
-from flet_camera import Camera
+
+try:
+    from flet_camera import Camera
+except ImportError:
+    Camera = None
 
 
 def take_foto(page: ft.Page):
+    if Camera is None:
+        page.snack_bar = ft.SnackBar(
+            ft.Text("Cámara no disponible en versión web")
+        )
+        page.snack_bar.open = True
+        page.update()
+        return None
 
     camara = Camera(
         width=400,
@@ -14,7 +25,6 @@ def take_foto(page: ft.Page):
 
     async def tomar(e):
         foto = await camara.take_picture()
-
         print(foto)
 
     page.add(
@@ -26,5 +36,3 @@ def take_foto(page: ft.Page):
             ]
         )
     )
-
-
