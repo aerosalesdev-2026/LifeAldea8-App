@@ -60,8 +60,8 @@ async def main(page: ft.Page):
 
 
 
-ft.app(
-    target=main,
+ft.run(
+    main,
     view=ft.AppView.WEB_BROWSER,
     port=8550
 )
