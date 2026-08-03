@@ -1,63 +1,63 @@
-import requests
-import version,os
+# import requests
+# import version,os
 
 
-URL_VERSION = "https://github.com/aerosalesdev-2026/LifeAldea8-Updates/releases/download/v1.0.0/version.json"
+# URL_VERSION = "https://github.com/aerosalesdev-2026/LifeAldea8-Updates/releases/download/v1.0.0/version.json"
 
 
-def comprobar_actualizacion():
+# def comprobar_actualizacion():
 
-    try:
-        r = requests.get(
-            URL_VERSION,
-            timeout=10
-        )
+#     try:
+#         r = requests.get(
+#             URL_VERSION,
+#             timeout=10
+#         )
 
-        datos = r.json()
+#         datos = r.json()
 
-        if datos["version"] != version.VERSION:
-            return datos
+#         if datos["version"] != version.VERSION:
+#             return datos
 
-    except Exception as e:
-        print(e)
+#     except Exception as e:
+#         print(e)
 
-    return None
+#     return None
 
-def descargar_apk(page, url):
+# def descargar_apk(page, url):
 
-    try:
+#     try:
 
-        carpeta = page.get_directory_path()
+#         carpeta = page.get_directory_path()
 
-        ruta = os.path.join(
-            carpeta,
-            "LifeAldea8_update.apk"
-        )
-
-
-        respuesta = requests.get(
-            url,
-            stream=True,
-            timeout=60
-        )
+#         ruta = os.path.join(
+#             carpeta,
+#             "LifeAldea8_update.apk"
+#         )
 
 
-        with open(ruta, "wb") as archivo:
-
-            for bloque in respuesta.iter_content(
-                1024
-            ):
-                archivo.write(bloque)
-
-
-        return ruta
+#         respuesta = requests.get(
+#             url,
+#             stream=True,
+#             timeout=60
+#         )
 
 
-    except Exception as e:
+#         with open(ruta, "wb") as archivo:
 
-        print(
-            "Error descargando APK:",
-            e
-        )
+#             for bloque in respuesta.iter_content(
+#                 1024
+#             ):
+#                 archivo.write(bloque)
 
-        return None
+
+#         return ruta
+
+
+#     except Exception as e:
+
+#         print(
+#             "Error descargando APK:",
+#             e
+#         )
+
+#         return None
