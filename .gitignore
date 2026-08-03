@@ -9,6 +9,7 @@ dist/
 # Python
 __pycache__/
 *.pyc
+config.py
 
 # Flet
 *.apk
